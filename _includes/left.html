@@ -1,0 +1,16 @@
+<div class="left">
+  <div class="baslik">
+    <a href="{{ site.url }}">{{ site.title }}</a>
+  </div>
+  <div class="info">
+    {{ site.description }}
+  </div>
+  <hr>
+  <ul class="menu">
+  {% for post in site.posts %}
+    {% if post.title %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>
